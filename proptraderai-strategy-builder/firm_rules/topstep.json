@@ -1,0 +1,156 @@
+{
+  "firm_name": "Topstep",
+  "slug": "topstep",
+  "website": "https://www.topstep.com",
+  "founded": 2012,
+  "headquarters": "Chicago, IL, USA",
+  "trustpilot_rating": 4.6,
+  "automation_policy": "allowed",
+  "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
+  "last_verified": "2026-05-15",
+  "account_sizes": [50000, 100000, 150000],
+  "challenge_fee_structure": {
+    "50000": {
+      "monthly_fee": 49,
+      "activation_fee": 149,
+      "typical_discounts": "20-50% off monthly fee"
+    },
+    "100000": {
+      "monthly_fee": 99,
+      "activation_fee": 149,
+      "typical_discounts": "20-50% off monthly fee"
+    },
+    "150000": {
+      "monthly_fee": 149,
+      "activation_fee": 149,
+      "typical_discounts": "20-50% off monthly fee"
+    }
+  },
+  "rules": {
+    "50000": {
+      "profit_target": 3000,
+      "profit_target_percent": 6.0,
+      "daily_loss_limit": null,
+      "daily_loss_limit_percent": null,
+      "daily_loss_limit_notes": "No mandatory daily loss limit during the Trading Combine. A personal daily loss limit feature is available optionally via TopstepX settings; breaching it suspends trading for the remainder of the session but does NOT fail or reset the account.",
+      "max_drawdown": 2000,
+      "max_drawdown_percent": 4.0,
+      "drawdown_type": "eod_trailing",
+      "drawdown_notes": "EOD trailing during evaluation — trailing high-water mark is only updated at end of each trading day, not intraday. Switches to intraday trailing drawdown after funding.",
+      "max_contracts": {
+        "ES": 5,
+        "NQ": 5,
+        "MES": 50,
+        "MNQ": 50,
+        "YM": 5,
+        "RTY": 5,
+        "CL": 5,
+        "GC": 5
+      },
+      "contract_limit_progression": "May increase in Express Funded Account after profit milestones; verify current limits at help.topstep.com",
+      "consistency_rule": 0.50,
+      "consistency_rule_description": "No single day can exceed 50% of the profit target (e.g., max $1,500/day for a $50K account with a $3,000 target)",
+      "allows_overnight": true,
+      "allows_weekend_holding": false,
+      "allows_news_trading": false,
+      "min_trading_days": 2,
+      "max_trading_days": null,
+      "time_limit": null,
+      "time_limit_description": "Unlimited time to pass",
+      "trading_platforms": ["TopstepX (proprietary)", "NinjaTrader", "TradingView"]
+    },
+    "100000": {
+      "profit_target": 6000,
+      "profit_target_percent": 6.0,
+      "daily_loss_limit": null,
+      "daily_loss_limit_percent": null,
+      "daily_loss_limit_notes": "No mandatory daily loss limit during the Trading Combine. A personal daily loss limit feature is available optionally via TopstepX settings; breaching it suspends trading for the remainder of the session but does NOT fail or reset the account.",
+      "max_drawdown": 3000,
+      "max_drawdown_percent": 3.0,
+      "drawdown_type": "eod_trailing",
+      "drawdown_notes": "EOD trailing during evaluation — trailing high-water mark is only updated at end of each trading day, not intraday. Switches to intraday trailing drawdown after funding.",
+      "max_contracts": {
+        "ES": 10,
+        "NQ": 10,
+        "MES": 100,
+        "MNQ": 100,
+        "YM": 10,
+        "RTY": 10,
+        "CL": 5,
+        "GC": 5
+      },
+      "contract_limit_progression": "May increase in Express Funded Account after profit milestones; verify current limits at help.topstep.com",
+      "consistency_rule": 0.50,
+      "consistency_rule_description": "No single day can exceed 50% of the profit target (e.g., max $3,000/day for a $100K account with a $6,000 target)",
+      "allows_overnight": true,
+      "allows_weekend_holding": false,
+      "allows_news_trading": false,
+      "min_trading_days": 2,
+      "max_trading_days": null,
+      "time_limit": null,
+      "time_limit_description": "Unlimited time to pass",
+      "trading_platforms": ["TopstepX (proprietary)", "NinjaTrader", "TradingView"]
+    },
+    "150000": {
+      "profit_target": 9000,
+      "profit_target_percent": 6.0,
+      "daily_loss_limit": null,
+      "daily_loss_limit_percent": null,
+      "daily_loss_limit_notes": "No mandatory daily loss limit during the Trading Combine. A personal daily loss limit feature is available optionally via TopstepX settings; breaching it suspends trading for the remainder of the session but does NOT fail or reset the account.",
+      "max_drawdown": 4500,
+      "max_drawdown_percent": 3.0,
+      "drawdown_type": "eod_trailing",
+      "drawdown_notes": "EOD trailing during evaluation — trailing high-water mark is only updated at end of each trading day, not intraday. Switches to intraday trailing drawdown after funding.",
+      "max_contracts": {
+        "ES": 15,
+        "NQ": 15,
+        "MES": 150,
+        "MNQ": 150,
+        "YM": 15,
+        "RTY": 15,
+        "CL": 5,
+        "GC": 5
+      },
+      "contract_limit_progression": "May increase in Express Funded Account after profit milestones; verify current limits at help.topstep.com",
+      "consistency_rule": 0.50,
+      "consistency_rule_description": "No single day can exceed 50% of the profit target (e.g., max $4,500/day for a $150K account with a $9,000 target)",
+      "allows_overnight": true,
+      "allows_weekend_holding": false,
+      "allows_news_trading": false,
+      "min_trading_days": 2,
+      "max_trading_days": null,
+      "time_limit": null,
+      "time_limit_description": "Unlimited time to pass",
+      "trading_platforms": ["TopstepX (proprietary)", "NinjaTrader", "TradingView"]
+    }
+  },
+  "payout_structure": {
+    "initial_split": 0.90,
+    "first_payout_bonus": null,
+    "first_payout_bonus_description": "The 100% first-$10K bonus was discontinued for accounts opened after January 12, 2026. Traders who joined before that date retain it (grandfathered). All new traders receive the standard 90/10 split from day one.",
+    "payout_frequency": "On request; minimum 5 Benchmark Trading Days since last payout",
+    "payout_frequency_notes": "A Benchmark Trading Day = a market day where you actively trade and earn at least $150 in profits. For the first 30 Benchmark Trading Days, payouts are limited to 50% of your 90% share. After 30 Benchmark Trading Days, you may request 100% of your 90% share.",
+    "progression": [0.90]
+  },
+  "scaling_requirements": {
+    "available": true,
+    "profit_threshold_description": "Performance-based scaling available",
+    "details": "Can request account scaling after demonstrating consistent profitability"
+  },
+  "key_differentiator": "Most established prop firm (2012), best education and coaching, TopstepX API for automation",
+  "pros": [
+    "Most established and reputable",
+    "Best education and coaching resources",
+    "Payouts on request after 5 Benchmark Trading Days",
+    "Explicit automation policy",
+    "TopstepX API available",
+    "Unlimited time to pass"
+  ],
+  "cons": [
+    "Higher activation fee ($149)",
+    "Switches to intraday trailing drawdown after funding",
+    "VPS/VPN not allowed (must trade from personal device)",
+    "First-$10K 100% payout bonus discontinued for accounts opened after January 12, 2026"
+  ],
+  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026."
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "scalp",
+  "owner": "eternahybridexchange",
+  "repo": "mcp-trading-agent",
+  "path": "claude-code/.claude/skills/scalp",
+  "branch": "main",
+  "sha": "531d34c58e5c3a7ffd5327f3dec1bcd75b8491d5",
+  "source": "manual"
+}
