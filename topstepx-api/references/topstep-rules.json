@@ -7,7 +7,7 @@
   "trustpilot_rating": 4.6,
   "automation_policy": "allowed",
   "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
-  "last_verified": "2026-05-15",
+  "last_verified": "2026-05-19",
   "account_sizes": [50000, 100000, 150000],
   "challenge_fee_structure": {
     "50000": {
@@ -24,6 +24,23 @@
       "monthly_fee": 149,
       "activation_fee": 149,
       "typical_discounts": "20-50% off monthly fee"
+    },
+    "no_activation_fee_path": {
+      "introduced": "2025-11-25",
+      "last_updated": "2026-04-28",
+      "description": "Alternative pricing path with higher monthly fee but $0 activation fee when you pass. Pricing updated April 28, 2026. Best for traders confident they will pass in 1-2 attempts.",
+      "50000": {
+        "monthly_fee": 95,
+        "activation_fee": 0
+      },
+      "100000": {
+        "monthly_fee": 149,
+        "activation_fee": 0
+      },
+      "150000": {
+        "monthly_fee": 229,
+        "activation_fee": 0
+      }
     }
   },
   "rules": {
@@ -128,8 +145,24 @@
     "initial_split": 0.90,
     "first_payout_bonus": null,
     "first_payout_bonus_description": "The 100% first-$10K bonus was discontinued for accounts opened after January 12, 2026. Traders who joined before that date retain it (grandfathered). All new traders receive the standard 90/10 split from day one.",
-    "payout_frequency": "On request; minimum 5 Benchmark Trading Days since last payout",
-    "payout_frequency_notes": "A Benchmark Trading Day = a market day where you actively trade and earn at least $150 in profits. For the first 30 Benchmark Trading Days, payouts are limited to 50% of your 90% share. After 30 Benchmark Trading Days, you may request 100% of your 90% share.",
+    "minimum_payout_request": 125,
+    "express_funded_account_paths": {
+      "introduced": "2026-02-05",
+      "standard": {
+        "payout_eligibility": "5 winning trading days per payout cycle (winning day = net PnL ≥ $150)",
+        "max_payout_per_cycle": 5000,
+        "max_payout_percent_of_balance": 0.50,
+        "notes": "Maximum payout is the lower of $5,000 or 50% of your reward balance per cycle."
+      },
+      "consistency": {
+        "payout_eligibility": "3 trading days per payout cycle; largest single winning day must be ≤ 40% of total net profit for the payout window",
+        "max_payout_per_cycle": 6000,
+        "max_payout_percent_of_balance": 0.50,
+        "notes": "Maximum payout is the lower of $6,000 or 50% of your reward balance. Allows faster payout cycles in exchange for a 40% consistency constraint."
+      }
+    },
+    "payout_frequency": "On request, once payout eligibility requirements are met per chosen EFA path",
+    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+, max $5K/cycle) and Consistency (3 trading days with ≤40% best-day share, max $6K/cycle). Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
     "progression": [0.90]
   },
   "scaling_requirements": {
@@ -141,16 +174,18 @@
   "pros": [
     "Most established and reputable",
     "Best education and coaching resources",
-    "Payouts on request after 5 Benchmark Trading Days",
+    "Two EFA payout paths: Standard (5 days, $5K cap) or Consistency (3 days, $6K cap)",
+    "No Activation Fee path available ($0 on pass, introduced November 2025)",
     "Explicit automation policy",
     "TopstepX API available",
     "Unlimited time to pass"
   ],
   "cons": [
-    "Higher activation fee ($149)",
+    "Standard path activation fee $149 (avoidable via No Activation Fee path at higher monthly cost)",
     "Switches to intraday trailing drawdown after funding",
     "VPS/VPN not allowed (must trade from personal device)",
-    "First-$10K 100% payout bonus discontinued for accounts opened after January 12, 2026"
+    "First-$10K 100% payout bonus discontinued for accounts opened after January 12, 2026",
+    "EFA Standard payout capped at $5K per cycle; EFA Consistency capped at $6K per cycle"
   ],
-  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026."
+  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+, $5K max per payout) and Consistency (requires 3 trading days with ≤40% best-day concentration, $6K max per payout). A Live Funded Account tier exists beyond EFA for consistently profitable traders."
 }
