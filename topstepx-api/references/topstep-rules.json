@@ -7,7 +7,7 @@
   "trustpilot_rating": 4.6,
   "automation_policy": "allowed",
   "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
-  "last_verified": "2026-06-01",
+  "last_verified": "2026-06-08",
   "account_sizes": [50000, 100000, 150000],
   "challenge_fee_structure": {
     "50000": {
@@ -158,22 +158,26 @@
       "standard": {
         "payout_eligibility": "5 winning trading days per payout cycle (winning day = net PnL ≥ $150)",
         "max_payout_per_cycle": 2000,
+        "max_payout_per_cycle_100k": 3000,
+        "max_payout_per_cycle_150k": 5000,
         "max_payout_per_cycle_grandfathered": 5000,
         "max_payout_percent_of_balance": 0.50,
         "cap_change_date": "2026-04-28",
-        "notes": "Maximum payout is the lower of the per-account-size cap or 50% of your reward balance per cycle. April 28, 2026 reduction affected new 50K and 100K accounts only (50K cap now $2,000, down from $5,000; 100K cap reduced — verify exact amount at help.topstep.com). The 150K account Standard cap was NOT reduced and remains $5,000. The max_payout_per_cycle value above reflects the 50K cap as the floor. Accounts that activated their EFA before April 28, 2026 retain the original $5,000 cap regardless of account size."
+        "notes": "Maximum payout is the lower of the per-account-size cap or 50% of your reward balance per cycle. April 28, 2026 reduction affected new 50K and 100K accounts only. Caps by account size: 50K=$2,000 (down from $5,000), 100K=$3,000 (down from $5,000), 150K=$5,000 (unchanged). The max_payout_per_cycle value reflects the 50K cap as the minimum floor. Accounts that activated their EFA before April 28, 2026 retain the original $5,000 cap regardless of account size."
       },
       "consistency": {
         "payout_eligibility": "3 trading days per payout cycle; largest single winning day must be ≤ 40% of total net profit for the payout window",
         "max_payout_per_cycle": 3000,
+        "max_payout_per_cycle_100k": 3000,
+        "max_payout_per_cycle_150k": 6000,
         "max_payout_per_cycle_grandfathered": 6000,
         "max_payout_percent_of_balance": 0.50,
         "cap_change_date": "2026-04-28",
-        "notes": "Maximum payout is the lower of the per-account-size cap or 50% of your reward balance. April 28, 2026 reduction affected new 50K and 100K accounts only (50K cap now $3,000, down from $6,000; 100K cap reduced — verify exact amount at help.topstep.com). The 150K account Consistency cap was NOT reduced and remains $6,000. The max_payout_per_cycle value above reflects the 50K cap as the floor. Accounts that activated their EFA before April 28, 2026 retain the original $6,000 cap regardless of account size. Allows faster payout cycles in exchange for a 40% consistency constraint."
+        "notes": "Maximum payout is the lower of the per-account-size cap or 50% of your reward balance. April 28, 2026 reduction affected new 50K and 100K accounts only. Caps by account size: 50K=$3,000 (down from $6,000), 100K=$3,000 (down from $6,000), 150K=$6,000 (unchanged). The max_payout_per_cycle value reflects the 50K cap as the minimum floor. Accounts that activated their EFA before April 28, 2026 retain the original $6,000 cap regardless of account size. Allows faster payout cycles in exchange for a 40% consistency constraint."
       }
     },
     "payout_frequency": "On request, once payout eligibility requirements are met per chosen EFA path",
-    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+) and Consistency (3 trading days with ≤40% best-day share). Payout caps vary by account size: 50K caps reduced on April 28, 2026 to $2K (Standard) and $3K (Consistency) for new accounts; 150K accounts kept the original $5K/$6K caps unchanged; accounts activated before April 28, 2026 are grandfathered at original caps. ACH and Wire payouts carry a $30 processing fee deducted after the 90/10 split; Wise and Aeropay carry no Topstep fee. Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
+    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+) and Consistency (3 trading days with ≤40% best-day share). Payout caps by account size for new accounts (April 28, 2026 reduction): Standard path: 50K=$2K, 100K=$3K, 150K=$5K (unchanged); Consistency path: 50K=$3K, 100K=$3K, 150K=$6K (unchanged). Accounts activated before April 28, 2026 are grandfathered at original caps ($5K Standard / $6K Consistency regardless of size). ACH and Wire payouts carry a $30 processing fee deducted after the 90/10 split; Wise and Aeropay carry no Topstep fee. Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
     "progression": [0.90]
   },
   "scaling_requirements": {
@@ -185,7 +189,7 @@
   "pros": [
     "Most established and reputable",
     "Best education and coaching resources",
-    "Two EFA payout paths: Standard (5 days) or Consistency (3 days, 40% constraint); payout caps vary by account size (50K new accounts: $2K Standard / $3K Consistency; 150K: $5K Standard / $6K Consistency unchanged)",
+    "Two EFA payout paths: Standard (5 days) or Consistency (3 days, 40% constraint); payout caps for new accounts: 50K=$2K Standard/$3K Consistency; 100K=$3K Standard/$3K Consistency; 150K=$5K Standard/$6K Consistency (unchanged)",
     "No Activation Fee path available ($0 on pass, introduced November 2025)",
     "Explicit automation policy",
     "TopstepX API available",
@@ -196,7 +200,7 @@
     "Switches to intraday trailing drawdown after funding",
     "VPS/VPN not allowed (must trade from personal device)",
     "First-$10K 100% payout bonus discontinued for accounts opened after January 12, 2026",
-    "EFA payout caps cut for new 50K accounts on April 28 2026: Standard $2K/cycle (was $5K), Consistency $3K/cycle (was $6K); 150K accounts unaffected (kept $5K/$6K); ACH/Wire withdrawals carry a $30 processing fee"
+    "EFA payout caps cut for new 50K and 100K accounts on April 28 2026: 50K Standard $2K/cycle (was $5K), 50K Consistency $3K/cycle (was $6K); 100K Standard $3K/cycle (was $5K), 100K Consistency $3K/cycle (was $6K); 150K accounts unaffected (kept $5K/$6K); ACH/Wire withdrawals carry a $30 processing fee"
   ],
-  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts (50K Standard now $2K/cycle, Consistency now $3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged). Accounts that activated before April 28, 2026 also retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
+  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
 }
