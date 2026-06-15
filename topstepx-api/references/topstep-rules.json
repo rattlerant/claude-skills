@@ -7,7 +7,7 @@
   "trustpilot_rating": 4.6,
   "automation_policy": "allowed",
   "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
-  "last_verified": "2026-06-08",
+  "last_verified": "2026-06-15",
   "account_sizes": [50000, 100000, 150000],
   "challenge_fee_structure": {
     "50000": {
@@ -67,9 +67,11 @@
       "contract_limit_progression": "May increase in Express Funded Account after profit milestones; verify current limits at help.topstep.com",
       "consistency_rule": 0.50,
       "consistency_rule_description": "No single day can exceed 50% of the profit target (e.g., max $1,500/day for a $50K account with a $3,000 target)",
-      "allows_overnight": true,
+      "allows_overnight": false,
+      "allows_overnight_notes": "All positions must be closed by 3:10 PM CT every weekday. Topstep does not permit holding positions from one session to the next. Positions remaining open at 3:10 PM CT are auto-liquidated. Trading resumes at 5:00 PM CT. Topstep is a day-trading program only.",
       "allows_weekend_holding": false,
-      "allows_news_trading": false,
+      "allows_news_trading": true,
+      "allows_news_trading_notes": "News trading is allowed with no hard blackout windows or restricted time periods. Topstep does not publish a formal news-trading restriction. However, purposefully trading at maximum position size into a major news event is a prohibited strategy and can result in account review or closure.",
       "min_trading_days": 2,
       "max_trading_days": null,
       "time_limit": null,
@@ -99,9 +101,11 @@
       "contract_limit_progression": "May increase in Express Funded Account after profit milestones; verify current limits at help.topstep.com",
       "consistency_rule": 0.50,
       "consistency_rule_description": "No single day can exceed 50% of the profit target (e.g., max $3,000/day for a $100K account with a $6,000 target)",
-      "allows_overnight": true,
+      "allows_overnight": false,
+      "allows_overnight_notes": "All positions must be closed by 3:10 PM CT every weekday. Topstep does not permit holding positions from one session to the next. Positions remaining open at 3:10 PM CT are auto-liquidated. Trading resumes at 5:00 PM CT. Topstep is a day-trading program only.",
       "allows_weekend_holding": false,
-      "allows_news_trading": false,
+      "allows_news_trading": true,
+      "allows_news_trading_notes": "News trading is allowed with no hard blackout windows or restricted time periods. Topstep does not publish a formal news-trading restriction. However, purposefully trading at maximum position size into a major news event is a prohibited strategy and can result in account review or closure.",
       "min_trading_days": 2,
       "max_trading_days": null,
       "time_limit": null,
@@ -131,9 +135,11 @@
       "contract_limit_progression": "May increase in Express Funded Account after profit milestones; verify current limits at help.topstep.com",
       "consistency_rule": 0.50,
       "consistency_rule_description": "No single day can exceed 50% of the profit target (e.g., max $4,500/day for a $150K account with a $9,000 target)",
-      "allows_overnight": true,
+      "allows_overnight": false,
+      "allows_overnight_notes": "All positions must be closed by 3:10 PM CT every weekday. Topstep does not permit holding positions from one session to the next. Positions remaining open at 3:10 PM CT are auto-liquidated. Trading resumes at 5:00 PM CT. Topstep is a day-trading program only.",
       "allows_weekend_holding": false,
-      "allows_news_trading": false,
+      "allows_news_trading": true,
+      "allows_news_trading_notes": "News trading is allowed with no hard blackout windows or restricted time periods. Topstep does not publish a formal news-trading restriction. However, purposefully trading at maximum position size into a major news event is a prohibited strategy and can result in account review or closure.",
       "min_trading_days": 2,
       "max_trading_days": null,
       "time_limit": null,
@@ -176,8 +182,13 @@
         "notes": "Maximum payout is the lower of the per-account-size cap or 50% of your reward balance. April 28, 2026 reduction affected new 50K and 100K accounts only. Caps by account size: 50K=$3,000 (down from $6,000), 100K=$3,000 (down from $6,000), 150K=$6,000 (unchanged). The max_payout_per_cycle value reflects the 50K cap as the minimum floor. Accounts that activated their EFA before April 28, 2026 retain the original $6,000 cap regardless of account size. Allows faster payout cycles in exchange for a 40% consistency constraint."
       }
     },
+    "repeat_payout_minimum_balance": {
+      "introduced": "2025-12-30",
+      "description": "Two-condition rule for all Express Funded Account payouts after the first: (1) must meet the chosen path's winning-days/consistency requirement AND (2) must have a net-positive balance relative to the post-payout starting balance (Minimum Payout Balance). If the account balance dropped below the post-payout starting balance at any time, no withdrawal can be requested until the balance recovers above it. The first payout still requires only the path's winning-days requirement.",
+      "applies_to": "all EFA payouts after the first"
+    },
     "payout_frequency": "On request, once payout eligibility requirements are met per chosen EFA path",
-    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+) and Consistency (3 trading days with ≤40% best-day share). Payout caps by account size for new accounts (April 28, 2026 reduction): Standard path: 50K=$2K, 100K=$3K, 150K=$5K (unchanged); Consistency path: 50K=$3K, 100K=$3K, 150K=$6K (unchanged). Accounts activated before April 28, 2026 are grandfathered at original caps ($5K Standard / $6K Consistency regardless of size). ACH and Wire payouts carry a $30 processing fee deducted after the 90/10 split; Wise and Aeropay carry no Topstep fee. Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
+    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+) and Consistency (3 trading days with ≤40% best-day share). As of December 30, 2025, all payouts after the first require BOTH the path's winning-days requirement AND a Minimum Payout Balance (net profitable since the last payout). Payout caps by account size for new accounts (April 28, 2026 reduction): Standard path: 50K=$2K, 100K=$3K, 150K=$5K (unchanged); Consistency path: 50K=$3K, 100K=$3K, 150K=$6K (unchanged). Accounts activated before April 28, 2026 are grandfathered at original caps ($5K Standard / $6K Consistency regardless of size). ACH and Wire payouts carry a $30 processing fee deducted after the 90/10 split; Wise and Aeropay carry no Topstep fee. Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
     "progression": [0.90]
   },
   "scaling_requirements": {
@@ -198,9 +209,11 @@
   "cons": [
     "Standard path activation fee $149 (avoidable via No Activation Fee path at higher monthly cost)",
     "Switches to intraday trailing drawdown after funding",
+    "No overnight or weekend holding — day-trading only, all positions auto-liquidated at 3:10 PM CT",
     "VPS/VPN not allowed (must trade from personal device)",
     "First-$10K 100% payout bonus discontinued for accounts opened after January 12, 2026",
-    "EFA payout caps cut for new 50K and 100K accounts on April 28 2026: 50K Standard $2K/cycle (was $5K), 50K Consistency $3K/cycle (was $6K); 100K Standard $3K/cycle (was $5K), 100K Consistency $3K/cycle (was $6K); 150K accounts unaffected (kept $5K/$6K); ACH/Wire withdrawals carry a $30 processing fee"
+    "EFA payout caps cut for new 50K and 100K accounts on April 28 2026: 50K Standard $2K/cycle (was $5K), 50K Consistency $3K/cycle (was $6K); 100K Standard $3K/cycle (was $5K), 100K Consistency $3K/cycle (was $6K); 150K accounts unaffected (kept $5K/$6K); ACH/Wire withdrawals carry a $30 processing fee",
+    "Repeat EFA payouts (after the first) require a two-condition test: meet winning-days requirement AND maintain net-positive balance since last payout (Minimum Payout Balance, effective December 30, 2025)"
   ],
-  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
+  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. Topstep is a day-trading program: all positions must be closed by 3:10 PM CT every weekday; positions are auto-liquidated at that time. Trading resumes at 5:00 PM CT. No overnight or weekend holding. News trading is allowed — Topstep publishes no hard news-event blackout, but purposefully trading at maximum position size into a major news event is a prohibited strategy. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of December 30, 2025, all EFA payouts after the first require a two-condition test: meet the path's winning-days requirement AND maintain net-positive balance since the last payout (Minimum Payout Balance). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
 }
