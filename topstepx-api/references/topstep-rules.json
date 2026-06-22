@@ -7,7 +7,7 @@
   "trustpilot_rating": 4.6,
   "automation_policy": "allowed",
   "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
-  "last_verified": "2026-06-15",
+  "last_verified": "2026-06-22",
   "account_sizes": [50000, 100000, 150000],
   "challenge_fee_structure": {
     "50000": {
@@ -187,8 +187,25 @@
       "description": "Two-condition rule for all Express Funded Account payouts after the first: (1) must meet the chosen path's winning-days/consistency requirement AND (2) must have a net-positive balance relative to the post-payout starting balance (Minimum Payout Balance). If the account balance dropped below the post-payout starting balance at any time, no withdrawal can be requested until the balance recovers above it. The first payout still requires only the path's winning-days requirement.",
       "applies_to": "all EFA payouts after the first"
     },
+    "dll_double_payout_cap_promotion": {
+      "introduced": "2026-06-02",
+      "end_date": null,
+      "description": "Traders who add a Daily Loss Limit (DLL) to their account at checkout when purchasing a Trading Combine unlock double the standard per-request EFA payout caps. The DLL must be added at the Trading Combine purchase stage — adding it during EFA activation or reactivation does NOT qualify. No end date established; Topstep may modify or terminate at any time. Topstep X announcement: 'Add a DLL and unlock DOUBLE payout caps up to $12,000.'",
+      "condition": "DLL added at Trading Combine checkout only; not at EFA activation/reactivation stage",
+      "doubled_caps_standard_path": {
+        "50000": 4000,
+        "100000": 6000,
+        "150000": 10000
+      },
+      "doubled_caps_consistency_path": {
+        "50000": 6000,
+        "100000": 6000,
+        "150000": 12000
+      },
+      "additional_benefits": "$50 off eligible Back2Funded EFA reactivations for DLL holders; discounted Trading Combine pricing during limited-time offering"
+    },
     "payout_frequency": "On request, once payout eligibility requirements are met per chosen EFA path",
-    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+) and Consistency (3 trading days with ≤40% best-day share). As of December 30, 2025, all payouts after the first require BOTH the path's winning-days requirement AND a Minimum Payout Balance (net profitable since the last payout). Payout caps by account size for new accounts (April 28, 2026 reduction): Standard path: 50K=$2K, 100K=$3K, 150K=$5K (unchanged); Consistency path: 50K=$3K, 100K=$3K, 150K=$6K (unchanged). Accounts activated before April 28, 2026 are grandfathered at original caps ($5K Standard / $6K Consistency regardless of size). ACH and Wire payouts carry a $30 processing fee deducted after the 90/10 split; Wise and Aeropay carry no Topstep fee. Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
+    "payout_frequency_notes": "Two EFA paths since February 5, 2026: Standard (5 winning days of $150+) and Consistency (3 trading days with ≤40% best-day share). As of December 30, 2025, all payouts after the first require BOTH the path's winning-days requirement AND a Minimum Payout Balance (net profitable since the last payout). Payout caps by account size for new accounts (April 28, 2026 reduction): Standard path: 50K=$2K, 100K=$3K, 150K=$5K (unchanged); Consistency path: 50K=$3K, 100K=$3K, 150K=$6K (unchanged). Accounts activated before April 28, 2026 are grandfathered at original caps ($5K Standard / $6K Consistency regardless of size). DLL DOUBLE CAP PROMOTION (June 2, 2026, no end date): Traders who add a Daily Loss Limit at Trading Combine checkout unlock double caps — Standard: 50K=$4K, 100K=$6K, 150K=$10K; Consistency: 50K=$6K, 100K=$6K, 150K=$12K. DLL must be added at Combine purchase, not EFA activation stage. ACH and Wire payouts carry a $30 processing fee deducted after the 90/10 split; Wise and Aeropay carry no Topstep fee. Live Funded Account has separate rules: payouts capped at 50% of profits until 30 qualifying winning days are accumulated, after which daily payouts and 100% access unlock.",
     "progression": [0.90]
   },
   "scaling_requirements": {
@@ -200,7 +217,7 @@
   "pros": [
     "Most established and reputable",
     "Best education and coaching resources",
-    "Two EFA payout paths: Standard (5 days) or Consistency (3 days, 40% constraint); payout caps for new accounts: 50K=$2K Standard/$3K Consistency; 100K=$3K Standard/$3K Consistency; 150K=$5K Standard/$6K Consistency (unchanged)",
+    "Two EFA payout paths: Standard (5 days) or Consistency (3 days, 40% constraint); payout caps for new accounts: 50K=$2K Standard/$3K Consistency; 100K=$3K Standard/$3K Consistency; 150K=$5K Standard/$6K Consistency (unchanged); DLL holders (opt-in at Combine checkout) unlock double caps: Standard 50K=$4K/100K=$6K/150K=$10K; Consistency 50K=$6K/100K=$6K/150K=$12K (since June 2, 2026)",
     "No Activation Fee path available ($0 on pass, introduced November 2025)",
     "Explicit automation policy",
     "TopstepX API available",
@@ -215,5 +232,5 @@
     "EFA payout caps cut for new 50K and 100K accounts on April 28 2026: 50K Standard $2K/cycle (was $5K), 50K Consistency $3K/cycle (was $6K); 100K Standard $3K/cycle (was $5K), 100K Consistency $3K/cycle (was $6K); 150K accounts unaffected (kept $5K/$6K); ACH/Wire withdrawals carry a $30 processing fee",
     "Repeat EFA payouts (after the first) require a two-condition test: meet winning-days requirement AND maintain net-positive balance since last payout (Minimum Payout Balance, effective December 30, 2025)"
   ],
-  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. Topstep is a day-trading program: all positions must be closed by 3:10 PM CT every weekday; positions are auto-liquidated at that time. Trading resumes at 5:00 PM CT. No overnight or weekend holding. News trading is allowed — Topstep publishes no hard news-event blackout, but purposefully trading at maximum position size into a major news event is a prohibited strategy. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of December 30, 2025, all EFA payouts after the first require a two-condition test: meet the path's winning-days requirement AND maintain net-positive balance since the last payout (Minimum Payout Balance). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
+  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. Topstep is a day-trading program: all positions must be closed by 3:10 PM CT every weekday; positions are auto-liquidated at that time. Trading resumes at 5:00 PM CT. No overnight or weekend holding. News trading is allowed — Topstep publishes no hard news-event blackout, but purposefully trading at maximum position size into a major news event is a prohibited strategy. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$149/mo + $149 activation) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of December 30, 2025, all EFA payouts after the first require a two-condition test: meet the path's winning-days requirement AND maintain net-positive balance since the last payout (Minimum Payout Balance). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. As of June 2, 2026, traders who voluntarily add a Daily Loss Limit (DLL) at Trading Combine checkout unlock double EFA payout caps (up to $12,000 on the Consistency 150K path): Standard path doubles to 50K=$4K, 100K=$6K, 150K=$10K; Consistency path doubles to 50K=$6K, 100K=$6K, 150K=$12K. DLL must be added at Combine purchase stage, not at EFA activation. DLL holders also receive $50 off Back2Funded EFA reactivations. Offer has no stated end date but Topstep may modify or terminate at any time. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
 }
