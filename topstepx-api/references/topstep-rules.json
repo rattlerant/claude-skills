@@ -6,8 +6,8 @@
   "headquarters": "Chicago, IL, USA",
   "trustpilot_rating": 4.6,
   "automation_policy": "allowed",
-  "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
-  "last_verified": "2026-06-29",
+  "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo via ProjectX Dashboard; Topstep traders reportedly receive 50% off with code 'topstep' = $14.50/mo, no stated expiration — verify at help.topstep.com/en/articles/11187768). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
+  "last_verified": "2026-07-06",
   "account_sizes": [50000, 100000, 150000],
   "challenge_fee_structure": {
     "50000": {
@@ -77,7 +77,8 @@
       "max_trading_days": null,
       "time_limit": null,
       "time_limit_description": "Unlimited time to pass",
-      "trading_platforms": ["TopstepX (proprietary)", "NinjaTrader", "TradingView"]
+      "trading_platforms": ["TopstepX (proprietary)"],
+      "trading_platforms_notes": "Since July 7, 2025, all new Trading Combines run exclusively on TopstepX. Legacy accounts on NinjaTrader or Tradovate are grandfathered and may continue trading, but resets became TopstepX-only from August 1, 2025. TradingView charts are integrated within TopstepX (not a separate execution platform)."
     },
     "100000": {
       "profit_target": 6000,
@@ -111,7 +112,8 @@
       "max_trading_days": null,
       "time_limit": null,
       "time_limit_description": "Unlimited time to pass",
-      "trading_platforms": ["TopstepX (proprietary)", "NinjaTrader", "TradingView"]
+      "trading_platforms": ["TopstepX (proprietary)"],
+      "trading_platforms_notes": "Since July 7, 2025, all new Trading Combines run exclusively on TopstepX. Legacy accounts on NinjaTrader or Tradovate are grandfathered and may continue trading, but resets became TopstepX-only from August 1, 2025. TradingView charts are integrated within TopstepX (not a separate execution platform)."
     },
     "150000": {
       "profit_target": 9000,
@@ -145,7 +147,8 @@
       "max_trading_days": null,
       "time_limit": null,
       "time_limit_description": "Unlimited time to pass",
-      "trading_platforms": ["TopstepX (proprietary)", "NinjaTrader", "TradingView"]
+      "trading_platforms": ["TopstepX (proprietary)"],
+      "trading_platforms_notes": "Since July 7, 2025, all new Trading Combines run exclusively on TopstepX. Legacy accounts on NinjaTrader or Tradovate are grandfathered and may continue trading, but resets became TopstepX-only from August 1, 2025. TradingView charts are integrated within TopstepX (not a separate execution platform)."
     }
   },
   "payout_structure": {
@@ -229,9 +232,10 @@
     "Switches to intraday trailing drawdown after funding",
     "No overnight or weekend holding — day-trading only, all positions auto-liquidated at 3:10 PM CT",
     "VPS/VPN not allowed (must trade from personal device)",
+    "New accounts restricted to TopstepX platform only since July 7, 2025; legacy NinjaTrader/Tradovate accounts grandfathered but resets are TopstepX-only since August 1, 2025",
     "First-$10K 100% payout bonus discontinued for accounts opened after January 12, 2026",
     "EFA payout caps cut for new 50K and 100K accounts on April 28 2026: 50K Standard $2K/cycle (was $5K), 50K Consistency $3K/cycle (was $6K); 100K Standard $3K/cycle (was $5K), 100K Consistency $3K/cycle (was $6K); 150K accounts unaffected (kept $5K/$6K); ACH/Wire withdrawals carry a $30 processing fee",
     "Repeat EFA payouts (after the first) require a two-condition test: meet winning-days requirement AND maintain net-positive balance since last payout (Minimum Payout Balance, effective December 30, 2025)"
   ],
-  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. Topstep is a day-trading program: all positions must be closed by 3:10 PM CT every weekday; positions are auto-liquidated at that time. Trading resumes at 5:00 PM CT. No overnight or weekend holding. News trading is allowed — Topstep publishes no hard news-event blackout, but purposefully trading at maximum position size into a major news event is a prohibited strategy. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$199/mo + $149 activation — note 150K was $149/mo before June 2, 2026) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of December 30, 2025, all EFA payouts after the first require a two-condition test: meet the path's winning-days requirement AND maintain net-positive balance since the last payout (Minimum Payout Balance). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. As of June 2, 2026, traders who voluntarily add a Daily Loss Limit (DLL) at Trading Combine checkout unlock double EFA payout caps (up to $12,000 on the Consistency 150K path): Standard path doubles to 50K=$4K, 100K=$6K, 150K=$10K; Consistency path doubles to 50K=$6K, 100K=$6K, 150K=$12K. DLL must be added at Combine purchase stage, not at EFA activation. DLL holders also receive $50 off Back2Funded EFA reactivations. Offer has no stated end date but Topstep may modify or terminate at any time. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
+  "notes": "Topstep is the gold standard for education-focused prop trading. Automation is explicitly allowed and they provide an API (TopstepX). VPS/VPN strictly prohibited — all trading must originate from a personal device. Topstep is a day-trading program: all positions must be closed by 3:10 PM CT every weekday; positions are auto-liquidated at that time. Trading resumes at 5:00 PM CT. No overnight or weekend holding. News trading is allowed — Topstep publishes no hard news-event blackout, but purposefully trading at maximum position size into a major news event is a prohibited strategy. PLATFORM POLICY: Since July 7, 2025, all new Trading Combines run exclusively on TopstepX. Legacy NinjaTrader and Tradovate accounts are grandfathered and may continue trading their existing accounts, but resets became TopstepX-only effective August 1, 2025. TradingView charting is integrated within TopstepX; it is not a separate order execution platform. As of February 28, 2026, ProjectX technology became exclusive to Topstep (other prop firms were removed from the platform). The 100% first-$10K payout bonus was grandfathered out for new accounts after January 12, 2026. Two pricing paths exist: Standard ($49/$99/$199/mo + $149 activation — note 150K was $149/mo before June 2, 2026) and No Activation Fee ($95/$149/$229/mo, $0 activation, pricing updated April 28, 2026). Since February 5, 2026, the Express Funded Account comes in two variants: Standard (requires 5 winning days of $150+) and Consistency (requires 3 trading days with ≤40% best-day concentration). As of December 30, 2025, all EFA payouts after the first require a two-condition test: meet the path's winning-days requirement AND maintain net-positive balance since the last payout (Minimum Payout Balance). As of April 28, 2026, EFA payout caps were cut for new 50K and 100K accounts: 50K Standard=$2K/cycle, 50K Consistency=$3K/cycle; 100K Standard=$3K/cycle, 100K Consistency=$3K/cycle; 150K accounts retain the original $5K/$6K caps unchanged. Accounts that activated before April 28, 2026 retain the original caps. ACH and Wire payouts carry a $30 processing fee (deducted after the 90/10 split); Wise and Aeropay carry no Topstep fee. As of June 2, 2026, traders who voluntarily add a Daily Loss Limit (DLL) at Trading Combine checkout unlock double EFA payout caps (up to $12,000 on the Consistency 150K path): Standard path doubles to 50K=$4K, 100K=$6K, 150K=$10K; Consistency path doubles to 50K=$6K, 100K=$6K, 150K=$12K. DLL must be added at Combine purchase stage, not at EFA activation. DLL holders also receive $50 off Back2Funded EFA reactivations. Offer has no stated end date but Topstep may modify or terminate at any time. A Live Funded Account tier exists beyond EFA for consistently profitable traders."
 }
