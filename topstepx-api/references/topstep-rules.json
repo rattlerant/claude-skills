@@ -7,7 +7,7 @@
   "trustpilot_rating": 4.6,
   "automation_policy": "allowed",
   "automation_notes": "Automated strategies can be used in the Trading Combine and Funded Accounts. TopstepX API available ($29/mo via ProjectX Dashboard; Topstep traders reportedly receive 50% off with code 'topstep' = $14.50/mo, no stated expiration — verify at help.topstep.com/en/articles/11187768). No VPS/VPN usage allowed - must trade from personal device. No HFT. Topstep provides zero support for automation troubleshooting.",
-  "last_verified": "2026-07-13",
+  "last_verified": "2026-07-20",
   "account_sizes": [50000, 100000, 150000],
   "challenge_fee_structure": {
     "50000": {
